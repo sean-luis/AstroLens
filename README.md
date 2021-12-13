@@ -1,6 +1,3 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-
 # AstroLens
 
 The most beautiful space - rocket - astronomy - guardians of the galaxy wanna be Star-Lord type of iOS mobile application found in the galaxy.
@@ -15,8 +12,6 @@ The most beautiful space - rocket - astronomy - guardians of the galaxy wanna be
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-astr
-See NASA's API's here -> https://api.nasa.gov/
 
 ## Getting Started
 
@@ -38,3 +33,6 @@ git clone https://github.com/sean-luis/astro-lens-ios.git
 2. Open in XCode
 
 3. Replace DEMO_KEY with your generated API key (optional)
+```sh
+api_key=gghhshjsndnsnk23443223432
+```
