@@ -1,12 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "fav_empty.png",
+      "filename" : "icons8-heart-64 (1).png",
       "idiom" : "universal"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
   }
 }

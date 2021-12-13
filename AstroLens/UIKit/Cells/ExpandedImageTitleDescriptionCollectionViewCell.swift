@@ -1,16 +1,10 @@
 import UIKit
 
-class ImageTitleDescriptionCollectionViewCell: UICollectionViewCell {
+class ExpandedImageTitleDescriptionCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var astroImageView: UIImageView!
-    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var loadingView: UIView!
-    @IBOutlet private weak var favouriteButton: FavouriteButton!
-    
-    public private(set) var isLoading: Bool = false
-    
-    private var hasSelectedCellAsFavourite: Bool = false
+    @IBOutlet private weak var descriptionText: UITextView!
     
     enum CellState {
         case loadingContent
@@ -19,13 +13,11 @@ class ImageTitleDescriptionCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        loadingIndicator.hidesWhenStopped = true
-        loadingIndicator.color = .white
         dateLabel.adjustsFontForContentSizeCategory = true
         titleLabel.adjustsFontForContentSizeCategory = true
         addCornerRadiusWithShadow()
         restrictUserContentSizePreferenceToSpecifiedSizes()
-        setHeightOfImageViewForSizeClasses()
+        hideDescriptionTextForSizeClasses()
     }
      
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -38,40 +30,26 @@ class ImageTitleDescriptionCollectionViewCell: UICollectionViewCell {
     func setCellState(to cellState: CellState) {
         switch cellState {
         case .loadingContent:
-            isLoading = true
-            loadingIndicator.startAnimating()
             astroImageView.isHidden = true
             dateLabel.isHidden = true
             titleLabel.isHidden = true
-            loadingView.isHidden = false
-            favouriteButton.isHidden = true
+            isUserInteractionEnabled = false
         case .hasContent:
-            isLoading = false
-            loadingIndicator.stopAnimating()
             astroImageView.isHidden = false
             dateLabel.isHidden = false
             titleLabel.isHidden = false
-            loadingView.isHidden = true
-            favouriteButton.isHidden = false
+            isUserInteractionEnabled = true
         }
     }
     
-    func configure(date: String, title: String, astroImage: UIImage, isFavourite: Bool?) {
+    func configure(date: String, title: String, description: String, astroImage: UIImage) {
         objc_sync_enter(self)
         defer { objc_sync_exit(self) }
         self.astroImageView.image = astroImage
         self.dateLabel.text = date
         self.titleLabel.text = title
-        if hasSelectedCellAsFavourite == false {
-            hasSelectedCellAsFavourite = true
-            guard let isFavourite = isFavourite, isFavourite else { return }
-            flipLikedState()
-        }
+        self.descriptionText.text = description
         setCellState(to: .hasContent)
-    }
-    
-    func flipLikedState() {
-        favouriteButton.flipLikedState()
     }
     
     func addCornerRadiusWithShadow() {
@@ -84,14 +62,14 @@ class ImageTitleDescriptionCollectionViewCell: UICollectionViewCell {
         
         contentView.layer.cornerRadius = 8
         astroImageView.layer.cornerRadius = 8
-        loadingView.layer.cornerRadius = 8
         dateLabel.layer.cornerRadius = 4
         titleLabel.layer.cornerRadius = 4
+        descriptionText.layer.cornerRadius = 4
     }
 }
 
 // MARK: - Dynamic fonts
-extension ImageTitleDescriptionCollectionViewCell {
+extension ExpandedImageTitleDescriptionCollectionViewCell {
     func handleContentSizeCategoryChanges(using previousPreferredContentSizeCategory: UIContentSizeCategory) {
         let currentPreferredContentSizeCategory = traitCollection.preferredContentSizeCategory
         if currentPreferredContentSizeCategory != previousPreferredContentSizeCategory {
@@ -125,21 +103,21 @@ extension ImageTitleDescriptionCollectionViewCell {
 }
 
 // MARK: - Size classes
-extension ImageTitleDescriptionCollectionViewCell {
+extension ExpandedImageTitleDescriptionCollectionViewCell {
     func handleSizeClassChanges(using previousTraitCollection: UITraitCollection) {
         if traitCollection.verticalSizeClass != previousTraitCollection.verticalSizeClass
             || traitCollection.horizontalSizeClass != previousTraitCollection.horizontalSizeClass {
-            setHeightOfImageViewForSizeClasses()
+            hideDescriptionTextForSizeClasses()
         }
     }
     
-    func setHeightOfImageViewForSizeClasses() {
+    func hideDescriptionTextForSizeClasses() {
         if traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular {
             // Activate compact constraints
-            // imageViewHeightConstraint.constant = 220
+            descriptionText.isHidden = false
         } else {
             // Activate regular constraints
-            // imageViewHeightConstraint.constant = 400
+            descriptionText.isHidden = true
         }
     }
 }

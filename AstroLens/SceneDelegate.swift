@@ -12,10 +12,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let layout = UICollectionViewFlowLayout()
-        let photoOfDayCollectionViewController = PhotoOfDayCollectionViewController(collectionViewLayout: layout)
-        window?.rootViewController = photoOfDayCollectionViewController
+        window?.rootViewController = makeLandingScreenCollectionViewController()
         window?.makeKeyAndVisible()
+    }
+    
+    private func makeLandingScreenCollectionViewController() -> UIViewController {
+        let layout = UICollectionViewFlowLayout()
+        return PhotoOfTheDayCollectionViewController(collectionViewLayout: layout)
+    }
+    
+    private func makeTabBarController() -> UIViewController {
+        let tabBarController = UITabBarController()
+        tabBarController.tabBar.backgroundColor = .darkGray
+        
+        let landingScreenTabBarItem = UITabBarItem()
+        landingScreenTabBarItem.title = "Landing"
+        let landingScreenLayout = UICollectionViewFlowLayout()
+        let landingScreenCollectionViewController = PhotoOfTheDayCollectionViewController(collectionViewLayout: landingScreenLayout)
+        landingScreenCollectionViewController.tabBarItem = landingScreenTabBarItem
+        
+        let favouritesTabBarItem = UITabBarItem()
+        favouritesTabBarItem.title = "Favourites"
+        let favouritesScreenLayout = UICollectionViewFlowLayout()
+        favouritesScreenLayout.scrollDirection = .horizontal
+        let favouritesScreenCollectionViewController = FavouritesCollectionViewController(collectionViewLayout: favouritesScreenLayout)
+        favouritesScreenCollectionViewController.tabBarItem = favouritesTabBarItem
+        
+        tabBarController.viewControllers = [landingScreenCollectionViewController,
+                                            favouritesScreenCollectionViewController]
+        return tabBarController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

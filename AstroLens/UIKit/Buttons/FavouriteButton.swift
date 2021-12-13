@@ -30,7 +30,7 @@ class FavouriteButton: UIButton {
     
     private func animate() {
         UIView.animate(withDuration: 0.1, animations: { [unowned self] in
-            let newImage = self.isLiked ? self.likedImage : self.unlikedImage
+            let newImage = self.isLiked ? self.likedImage : nil
             let newScale = self.isLiked ? self.likedScale : self.unlikedScale
             self.transform = self.transform.scaledBy(x: newScale, y: newScale)
             self.setImage(newImage, for: .normal)

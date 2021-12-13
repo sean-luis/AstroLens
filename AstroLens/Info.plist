@@ -56,5 +56,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>AstroLens wants to allow you to save Astronomy Photos of the Day to your Photo Library</string>
 </dict>
 </plist>

@@ -117,27 +117,3 @@ public final class NASAApi {
         return "\(year)-\(monthStr)-\(dayStr)"
     }
 }
-
-public final class DataLoadOperation: Operation {
-    public private(set) var response: PhotoOfTheDay?
-    private var completionHandler: ((PhotoOfTheDay) -> Void)
-    private let index: Int
-    
-    public func updateCompletionHandler(with completionHandler: @escaping ((PhotoOfTheDay) -> Void)) {
-        self.completionHandler = completionHandler
-    }
-        
-    public init(atIndex index: Int, withCompletion completionHandler: @escaping ((PhotoOfTheDay) -> Void)) {
-        self.index = index
-        self.completionHandler = completionHandler
-    }
-    
-    public override func main() {
-        if isCancelled { return }
-        NASAApi.shared.fetchPhotoOfTheDay(at: index, completionHandler: { [weak self] response in
-            guard let self = self else { return }
-            self.response = response
-            self.completionHandler(response)
-        })
-    }
-}
