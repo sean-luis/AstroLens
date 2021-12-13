@@ -5,13 +5,13 @@ import DataStore
 
 final class PhotoOfTheDayCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     private let kCellIdentifier = "ImageTitleDescriptionCollectionViewCell"
-    private let landingScreenViewModel = LandingScreenViewModel(numberOfPhotosToRetrieve: 14)
+    private let landingScreenViewModel = LandingScreenViewModel(numberOfPhotosToRetrieve: 7)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
         addGradientViewOnBackground()
-        //addDoubleTapGesture()
+        addDoubleTapGesture()
     }
     
     private func setupViewController() {
@@ -36,7 +36,7 @@ final class PhotoOfTheDayCollectionViewController: UICollectionViewController, U
         collectionView.backgroundView = pastelView
     }
     
-    /*private func addDoubleTapGesture() {
+    private func addDoubleTapGesture() {
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(doubleTapAction))
         doubleTapGesture.numberOfTapsRequired = 2
         doubleTapGesture.numberOfTouchesRequired = 1
@@ -62,7 +62,7 @@ final class PhotoOfTheDayCollectionViewController: UICollectionViewController, U
         }
         DataStoreImplementation.shared.removeObject(forKey: photoContent.date)
         cell.flipLikedState()
-    }*/
+    }
     
     // MARK: - CollectionView delegate methods
     
