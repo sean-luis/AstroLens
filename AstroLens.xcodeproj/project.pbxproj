@@ -7,13 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E2B3F8824E1A6D7001AF4CD /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2B3F8724E1A6D7001AF4CD /* NotificationCenter.framework */; };
-		1E2B3F8B24E1A6D7001AF4CD /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2B3F8A24E1A6D7001AF4CD /* TodayViewController.swift */; };
-		1E2B3F8E24E1A6D7001AF4CD /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2B3F8C24E1A6D7001AF4CD /* MainInterface.storyboard */; };
-		1E2B3F9224E1A6D7001AF4CD /* Astro Lens: Today's Astronomy Photo.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E2B3F8524E1A6D6001AF4CD /* Astro Lens: Today's Astronomy Photo.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		1E2B3F9724E1A984001AF4CD /* NASAApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5F67D924C5F88000C98622 /* NASAApi.swift */; };
-		1E2B3F9824E1A995001AF4CD /* PhotoOfTheDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9618124C6E3940037B17F /* PhotoOfTheDay.swift */; };
-		1E2B3F9924E1A9A9001AF4CD /* PhotoOfTheDayResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF9618324C6E3A10037B17F /* PhotoOfTheDayResponse.swift */; };
 		1E33318124D7F7A5005DE081 /* AnimatedTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33318024D7F7A5005DE081 /* AnimatedTabBarItem.swift */; };
 		1E33318324D7F7C5005DE081 /* AnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33318224D7F7C5005DE081 /* AnimatedTabBarController.swift */; };
 		1E33318524D7F856005DE081 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33318424D7F856005DE081 /* Collection+Extensions.swift */; };
@@ -43,7 +36,6 @@
 		1E65E70424C60BC3004B91B7 /* ImageTitleDescriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E65E70224C60BC3004B91B7 /* ImageTitleDescriptionCollectionViewCell.xib */; };
 		1E65E70524C60BC3004B91B7 /* ImageTitleDescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E65E70324C60BC3004B91B7 /* ImageTitleDescriptionCollectionViewCell.swift */; };
 		1E9E231525C91A6E00F7EBEA /* LandingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E231425C91A6E00F7EBEA /* LandingScreenViewController.swift */; };
-		1EB3E40524F6286C00D390FA /* NASAApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5F67BA24C5F83B00C98622 /* NASAApi.framework */; };
 		1ECACD4324E137D10013B680 /* ExpandedImageTitleDescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ECACD4224E137D10013B680 /* ExpandedImageTitleDescriptionCollectionViewCell.swift */; };
 		1ECACD4524E138BE0013B680 /* ExpandedImageTitleDescriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ECACD4424E138BE0013B680 /* ExpandedImageTitleDescriptionCollectionViewCell.xib */; };
 		1EF9616A24C6D1EC0037B17F /* DataStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF9616124C6D1EC0037B17F /* DataStore.framework */; };
@@ -57,13 +49,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E2B3F9024E1A6D7001AF4CD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E5F676C24C5F27900C98622 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E2B3F8424E1A6D6001AF4CD;
-			remoteInfo = TodaysAPOD;
-		};
 		1E5F678B24C5F27F00C98622 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E5F676C24C5F27900C98622 /* Project object */;
@@ -86,13 +71,6 @@
 			remoteInfo = "AstroLens APOD";
 		};
 		1E5F67CD24C5F83B00C98622 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1E5F676C24C5F27900C98622 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E5F67B924C5F83B00C98622;
-			remoteInfo = NASAApi;
-		};
-		1EB3E40724F6286C00D390FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E5F676C24C5F27900C98622 /* Project object */;
 			proxyType = 1;
@@ -129,7 +107,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				1E2B3F9224E1A6D7001AF4CD /* Astro Lens: Today's Astronomy Photo.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,11 +126,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E2B3F8524E1A6D6001AF4CD /* Astro Lens: Today's Astronomy Photo.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Astro Lens: Today's Astronomy Photo.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E2B3F8724E1A6D7001AF4CD /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		1E2B3F8A24E1A6D7001AF4CD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
-		1E2B3F8D24E1A6D7001AF4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		1E2B3F8F24E1A6D7001AF4CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E33318024D7F7A5005DE081 /* AnimatedTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTabBarItem.swift; sourceTree = "<group>"; };
 		1E33318224D7F7C5005DE081 /* AnimatedTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTabBarController.swift; sourceTree = "<group>"; };
 		1E33318424D7F856005DE081 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
@@ -202,15 +175,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1E2B3F8224E1A6D6001AF4CD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1EB3E40524F6286C00D390FA /* NASAApi.framework in Frameworks */,
-				1E2B3F8824E1A6D7001AF4CD /* NotificationCenter.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1E5F677124C5F27900C98622 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,16 +232,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1E2B3F8924E1A6D7001AF4CD /* TodaysAPOD */ = {
-			isa = PBXGroup;
-			children = (
-				1E2B3F8A24E1A6D7001AF4CD /* TodayViewController.swift */,
-				1E2B3F8C24E1A6D7001AF4CD /* MainInterface.storyboard */,
-				1E2B3F8F24E1A6D7001AF4CD /* Info.plist */,
-			);
-			path = TodaysAPOD;
-			sourceTree = "<group>";
-		};
 		1E33317F24D7F6D6005DE081 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,7 +252,6 @@
 				1E5F67C824C5F83B00C98622 /* NASAApiTests */,
 				1EF9616224C6D1EC0037B17F /* DataStore */,
 				1EF9616F24C6D1EC0037B17F /* DataStoreTests */,
-				1E2B3F8924E1A6D7001AF4CD /* TodaysAPOD */,
 				1E2B3F8624E1A6D6001AF4CD /* Frameworks */,
 				1E5F677524C5F27900C98622 /* Products */,
 			);
@@ -313,7 +266,6 @@
 				1E5F67C224C5F83B00C98622 /* NASAApiTests.xctest */,
 				1EF9616124C6D1EC0037B17F /* DataStore.framework */,
 				1EF9616924C6D1EC0037B17F /* DataStoreTests.xctest */,
-				1E2B3F8524E1A6D6001AF4CD /* Astro Lens: Today's Astronomy Photo.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -488,24 +440,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1E2B3F8424E1A6D6001AF4CD /* TodaysAPOD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1E2B3F9624E1A6D7001AF4CD /* Build configuration list for PBXNativeTarget "TodaysAPOD" */;
-			buildPhases = (
-				1E2B3F8124E1A6D6001AF4CD /* Sources */,
-				1E2B3F8224E1A6D6001AF4CD /* Frameworks */,
-				1E2B3F8324E1A6D6001AF4CD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1EB3E40824F6286C00D390FA /* PBXTargetDependency */,
-			);
-			name = TodaysAPOD;
-			productName = TodaysAPOD;
-			productReference = 1E2B3F8524E1A6D6001AF4CD /* Astro Lens: Today's Astronomy Photo.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		1E5F677324C5F27900C98622 /* AstroLens */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E5F679324C5F27F00C98622 /* Build configuration list for PBXNativeTarget "AstroLens" */;
@@ -521,7 +455,6 @@
 			dependencies = (
 				1E5F67CE24C5F83B00C98622 /* PBXTargetDependency */,
 				1EF9617524C6D1EC0037B17F /* PBXTargetDependency */,
-				1E2B3F9124E1A6D7001AF4CD /* PBXTargetDependency */,
 			);
 			name = AstroLens;
 			productName = "AstroLens APOD";
@@ -630,9 +563,6 @@
 				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "Sean 'Luis";
 				TargetAttributes = {
-					1E2B3F8424E1A6D6001AF4CD = {
-						CreatedOnToolsVersion = 11.6;
-					};
 					1E5F677324C5F27900C98622 = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -677,20 +607,11 @@
 				1E5F67C124C5F83B00C98622 /* NASAApiTests */,
 				1EF9616024C6D1EC0037B17F /* DataStore */,
 				1EF9616824C6D1EC0037B17F /* DataStoreTests */,
-				1E2B3F8424E1A6D6001AF4CD /* TodaysAPOD */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1E2B3F8324E1A6D6001AF4CD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E2B3F8E24E1A6D7001AF4CD /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1E5F677224C5F27900C98622 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -740,17 +661,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1E2B3F8124E1A6D6001AF4CD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E2B3F8B24E1A6D7001AF4CD /* TodayViewController.swift in Sources */,
-				1E2B3F9824E1A995001AF4CD /* PhotoOfTheDay.swift in Sources */,
-				1E2B3F9724E1A984001AF4CD /* NASAApi.swift in Sources */,
-				1E2B3F9924E1A9A9001AF4CD /* PhotoOfTheDayResponse.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1E5F677024C5F27900C98622 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -825,11 +735,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1E2B3F9124E1A6D7001AF4CD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E2B3F8424E1A6D6001AF4CD /* TodaysAPOD */;
-			targetProxy = 1E2B3F9024E1A6D7001AF4CD /* PBXContainerItemProxy */;
-		};
 		1E5F678C24C5F27F00C98622 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E5F677324C5F27900C98622 /* AstroLens */;
@@ -850,11 +755,6 @@
 			target = 1E5F67B924C5F83B00C98622 /* NASAApi */;
 			targetProxy = 1E5F67CD24C5F83B00C98622 /* PBXContainerItemProxy */;
 		};
-		1EB3E40824F6286C00D390FA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E5F67B924C5F83B00C98622 /* NASAApi */;
-			targetProxy = 1EB3E40724F6286C00D390FA /* PBXContainerItemProxy */;
-		};
 		1EF9616C24C6D1EC0037B17F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1EF9616024C6D1EC0037B17F /* DataStore */;
@@ -873,14 +773,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1E2B3F8C24E1A6D7001AF4CD /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1E2B3F8D24E1A6D7001AF4CD /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 		1E5F678224C5F27F00C98622 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -892,46 +784,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1E2B3F9424E1A6D7001AF4CD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86FNAMY5F2;
-				INFOPLIST_FILE = TodaysAPOD/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = seanluis.AstroLens.TodaysAPOD;
-				PRODUCT_NAME = "Astro Lens: Today's Astronomy Photo";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1E2B3F9524E1A6D7001AF4CD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 86FNAMY5F2;
-				INFOPLIST_FILE = TodaysAPOD/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = seanluis.AstroLens.TodaysAPOD;
-				PRODUCT_NAME = "Astro Lens: Today's Astronomy Photo";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		1E5F679124C5F27F00C98622 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1341,15 +1193,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1E2B3F9624E1A6D7001AF4CD /* Build configuration list for PBXNativeTarget "TodaysAPOD" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1E2B3F9424E1A6D7001AF4CD /* Debug */,
-				1E2B3F9524E1A6D7001AF4CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1E5F676F24C5F27900C98622 /* Build configuration list for PBXProject "AstroLens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
